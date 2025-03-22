@@ -1,9 +1,24 @@
 // Dark theme toggle functionality
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    themeToggle.textContent = document.body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
-});
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+  const icon = themeToggle.querySelector("i");
+
+  // Check if user has a saved theme preference
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-theme");
+    icon.classList.replace("fa-moon", "fa-sun"); // Show sun icon in dark mode
+  }
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+    if (body.classList.contains("dark-theme")) {
+      icon.classList.replace("fa-moon", "fa-sun");
+      localStorage.setItem("theme", "dark");
+    } else {
+      icon.classList.replace("fa-sun", "fa-moon");
+      localStorage.setItem("theme", "light");
+    }
+  });
 
 // Scroll reveal animations
 const faders = document.querySelectorAll('.fade-in');

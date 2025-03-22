@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Devicons for icons -->
     <link
       rel="stylesheet"
@@ -39,7 +40,7 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#about">About Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
@@ -50,10 +51,11 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
-            <li class="nav-item">
-              <button id="themeToggle" class="btn btn-secondary ms-2">
+            <li class="nav-item">   
+              <!-- <button id="themeToggle" class="btn btn-secondary ms-2">
                 Dark Mode
-              </button>
+              </button> -->
+              <button id="theme-toggle"><i class="fas fa-moon"></i></button>
             </li>
           </ul>
         </div>
@@ -63,12 +65,11 @@
     <!-- Hero Section -->
     <section id="hero" class="fade-in">
       <div class="content">
-        <h1>Hey,</h1>
-        <h2>I'm <b>Ashok Kumar</b>,</h2>
-        <h3>An aspiring Java Developer</h3>
+        <h4>Hi!</h4>
+        <h2>I'm <span class="highlight">Ashok Kumar</span>,</h2>
+        <h3><i>An aspiring Java Developer</i></h3>
       </div>
       <div class="profile">
-        <!-- Replace 'profile.jpg' with your actual profile image path -->
         <img src="images/profile-1.JPG" alt="Profile Picture" />
       </div>
     </section>
@@ -108,7 +109,6 @@
             <div class="skill-progress" style="width: 70%"></div>
           </div>
         </div>
-        <!-- Add additional skills similarly -->
       </div>
     </section>
 
