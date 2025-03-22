@@ -1,0 +1,112 @@
+/* Overall transition for theme changes */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-theme {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+/* Navbar styling */
+.navbar {
+  transition: background-color 0.3s;
+}
+/* Hero Section */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+  min-height: 100vh;
+}
+#hero .content {
+  flex: 1;
+}
+#hero .content h1,
+#hero .content h2,
+#hero .content h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+#hero .profile {
+  flex: 1;
+  text-align: right;
+}
+#hero .profile img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+/* About Section */
+#about {
+  padding: 100px 50px;
+}
+/* Skills Section */
+#skills {
+  padding: 100px 50px;
+}
+.skill {
+  margin-bottom: 20px;
+}
+.skill-name {
+  margin-bottom: 5px;
+}
+.skill-bar {
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.skill-progress {
+  background: #007bff;
+  height: 20px;
+  width: 0;
+  transition: width 1s;
+}
+/* Projects Section */
+#projects {
+  padding: 100px 50px;
+}
+.project-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.project-item img {
+  width: 100%;
+  transition: opacity 0.3s;
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.project-item:hover img {
+  opacity: 0.4;
+}
+.project-item:hover .project-overlay {
+  opacity: 1;
+}
+/* Contact Section */
+#contact {
+  padding: 100px 50px;
+}
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
