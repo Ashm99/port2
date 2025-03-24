@@ -62,21 +62,45 @@ body {
   padding: 100px 50px;
 }
 .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
   margin-bottom: 20px;
 }
+.skills-container {
+  padding: 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 50px 5vw;
+  max-width: 1000px;
+  margin: auto;
+}
 .skill-name {
+  font-weight: bold;
   margin-bottom: 5px;
 }
 .skill-bar {
+  width: 100%;
   background: #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .skill-progress {
-  background: #007bff;
+  background: linear-gradient(90deg, #007bff, #0056b3);
   height: 20px;
-  width: 0;
-  transition: width 1s;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+.skill-progress:hover {
+  filter: brightness(1.2);
+}
+.dark-theme .skill-bar {
+  background: #333;
+}
+.dark-theme .skill-progress {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
 }
 /* Projects Section */
 #projects {
