@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
 
 // Scroll reveal animations
 const faders = document.querySelectorAll(".fade-in");
-const appearOptions = { threshold: 0.2 };
+const appearOptions = { threshold: 0.5 };
 const appearOnScroll = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
